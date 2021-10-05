@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>YHATZEE Socre Board</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="./css/all.min.css" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <!-- <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
+            <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+            <li class="sidebar-nav-item"><a href="#about">About</a></li>
+            <li class="sidebar-nav-item"><a href="#services">Services</a></li>
+            <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
+            <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav> -->
+    <!-- Header-->
+
+    <header class="masthead d-flex align-items-center" style="background:var(--bs-danger); height:100vh;">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="row col-12">
+                <div class="col-6">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player style="width: 35vw; height: auto;" src="https://assets6.lottiefiles.com/packages/lf20_chkytin8.json" mode="bounce" background="transparent" speed="1.5" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+
+                </div>
+                <div class="col-6">
+                    <h1 class="mb-1" style="color:white; margin-top: 8vw;">야찌</h1>
+                    <h3 class="mb-5" style="color:white; font-size:1.2em;">온라인 점수표</h3>
+                </div>
+            </div>
+
+            <a class="btn btn-primary btn-xl" href="#about">기록하기</a>
+        </div>
+    </header>
+
+    <!-- About-->
+    <section class="content-section bg-light" id="about">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <style>
+                    .rowSt {
+                        margin-top: 4vw;
+                    }
+
+                    .inputSt {
+                        width: 80%;
+                    }
+
+                    .inputSt2 {
+                        width: 60%;
+                    }
+
+                    .calcul {}
+
+                    .card {
+                        margin-top: 3vw;
+                    }
+
+                    .first {
+                        margin-top: 3vw;
+                    }
+
+                    input {
+                        text-align: right;
+                    }
+
+                    input::placeholder {
+                        color: #6c757d;
+                        text-align: right;
+                    }
+
+                    input:read-only {
+                        background-color: #e9ecef;
+                        border: 0;
+                        color: #6c757d;
+                    }
+                </style>
+                <div class="chard-header">
+                    <button type="button" class="btn btn-primary" style="width:100%;height: 5vh;">합계 <span id="score">0</span>점</button>
+                </div>
+                <div class="card">
+                    <div class="chard-header">
+                        <button type="button" class="btn btn-primary">상단</button>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice-one"></i> 에이스
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice-two"></i> 듀얼
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice-three"></i> 트리플
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice-four"></i> 쿼드
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice-five "></i> 펜타
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice-six "></i> 헥사
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-bell"></i> 상단의 합
+                            </div>
+                            <div class="col-8">
+                                <p><input id="single" class="inputSt" type="number" pattern="\d*" value="" placeholder="" readonly> 점</p>
+                            </div>
+                        </div>
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-bell"></i> 미션 ( > 62 )
+                            </div>
+                            <div class="col-8">
+                                <p><input id="mission" class="inputSt calcul" type="number" pattern="\d*" value="" placeholder="0" readonly> 점</p>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-4">
+                                <i class="fas fa-dice"></i> 초이스
+                            </div>
+                            <div class="col-8">
+                                <p><input class="inputSt calcul" type="number" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="chard-header">
+                        <button type="button" class="btn btn-primary">하단</button>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-8">
+                                <i class="fas fa-dice-one"></i> <i class="fas fa-dice-one"></i> <i class="fas fa-dice-one"></i> <i class="fas fa-dice-one"></i> 포커
+                            </div>
+                            <div class="col-4">
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <i class="fas fa-dice-one"></i> <i class="fas fa-dice-one"></i> <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <span style="font-size:0.8em"> 풀하우스</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value=""> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <i class="fas fa-dice-one"></i> <i class="fas fa-dice-two"></i> <i class="fas fa-dice-three"></i> <i class="fas fa-dice-four"></i>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <span style="font-size:0.8em"> 스몰스트레이트</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="15"> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <i class="fas fa-dice-one"></i> <i class="fas fa-dice-two"></i> <i class="fas fa-dice-three"></i> <i class="fas fa-dice-four"></i> <i class="fas fa-dice-five"></i>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <span style="font-size:0.8em"> 라지스트레이트</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="30"> 점</p>
+                            </div>
+                        </div>
+
+                        <div class="row col-12 rowSt">
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i> <i class="fas fa-dice-six"></i>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <span style="font-size:0.8em"> 야 찌</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="50"> 점</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <script>
+                    $(".calcul").blur(function() {
+                        var sum = 0;
+                        var sub_sum = 0;
+                        $(".first").each(function() {
+                            sub_sum += Number($(this).val());
+                        });
+                        $("#single").val(sub_sum);
+                        if (sub_sum > 62) {
+                            $("#mission").val(35);
+                        }
+                        $(".calcul").each(function() {
+                            sum += Number($(this).val());
+                        });
+                        $("#score").text(sum);
+                    });
+                    // $(':input[readonly]').css({'background-color':'#e9ecef'});
+                    // $(':input[readonly]').css({'border':'0'});
+                    // $(':input[readonly]').css({'color':'#6c757d'});
+                </script>
+
+
+
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container px-4 px-lg-5">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="https://github.com/jongmal"><i class="fab fa-github"></i></a>
+                </li>
+                <!--
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+                </li> -->
+            </ul>
+            <p class="text-muted small mb-0">Copyright &copy; 도돌이표 2021</p>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
