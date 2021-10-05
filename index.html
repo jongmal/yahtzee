@@ -98,6 +98,7 @@
                 </style>
                 <div class="chard-header">
                     <button type="button" class="btn btn-primary" style="width:100%;height: 5vh;">합계 <span id="score">0</span>점</button>
+                    <button id="reset" type="button" class="btn btn-danger" style="margin-top:1vh; width:100%;height: 5vh;">초기화</button>
                 </div>
                 <div class="card">
                     <div class="chard-header">
@@ -305,6 +306,12 @@
                     // $(':input[readonly]').css({'background-color':'#e9ecef'});
                     // $(':input[readonly]').css({'border':'0'});
                     // $(':input[readonly]').css({'color':'#6c757d'});
+                    $("#reset").click(function (){
+                        $(".calcul").each(function(){
+                            $(this).val("");
+                        });
+                        $(".calcul").trigger("blur");
+                    });
                 </script>
 
 
