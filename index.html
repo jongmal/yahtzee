@@ -20,6 +20,18 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKMCHCBWS9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XKMCHCBWS9');
+    </script>
 </head>
 
 <body id="page-top">
@@ -112,7 +124,7 @@
                                 <i class="fas fa-dice-one"></i> 에이스
                             </div>
                             <div class="col-8">
-                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value="" min="0" max="5" required > 점</p>
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value="" min="0" max="5" required> 점</p>
                             </div>
                         </div>
                         <div class="row col-12 rowSt">
@@ -120,7 +132,7 @@
                                 <i class="fas fa-dice-two"></i> 듀얼
                             </div>
                             <div class="col-8">
-                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value="" min="0" max="10" required > 점</p>
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value="" min="0" max="10" required> 점</p>
                             </div>
                         </div>
 
@@ -156,7 +168,7 @@
                                 <i class="fas fa-dice-six "></i> 헥사
                             </div>
                             <div class="col-8">
-                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value=""  min="0" max="30"> 점</p>
+                                <p><input class="inputSt calcul first" type="number" pattern="\d*" value="" min="0" max="30"> 점</p>
                             </div>
                         </div>
 
@@ -186,7 +198,7 @@
                                 <i class="fas fa-dice"></i> 초이스
                             </div>
                             <div class="col-8">
-                                <p><input class="inputSt calcul" type="number" pattern="\d*" value=""  min="0" max="30"> 점</p>
+                                <p><input class="inputSt calcul" type="number" pattern="\d*" value="" min="0" max="30"> 점</p>
                             </div>
                         </div>
 
@@ -212,7 +224,7 @@
                                 </div>
                             </div>
                             <div class="col-4">
-                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value=""  min="0" max="24"> 점</p>
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" min="0" max="24"> 점</p>
                             </div>
                         </div>
 
@@ -229,7 +241,7 @@
                                 </div>
                             </div>
                             <div class="col-4">
-                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value=""  min="0" max="33"> 점</p>
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" min="0" max="33"> 점</p>
                             </div>
                         </div>
 
@@ -246,7 +258,7 @@
                                 </div>
                             </div>
                             <div class="col-4">
-                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="15"  min="0" max="15"> 점</p>
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="15" min="0" max="15"> 점</p>
                             </div>
                         </div>
 
@@ -263,7 +275,7 @@
                                 </div>
                             </div>
                             <div class="col-4">
-                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="30"  min="0" max="35"> 점</p>
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="30" min="0" max="35"> 점</p>
                             </div>
                         </div>
 
@@ -280,7 +292,7 @@
                                 </div>
                             </div>
                             <div class="col-4">
-                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="50"  min="0" max="50"> 점</p>
+                                <p><input class="inputSt2 calcul" type="number" pattern="\d*" pattern="\d*" value="" placeholder="50" min="0" max="50"> 점</p>
                             </div>
                         </div>
 
@@ -307,8 +319,8 @@
                     // $(':input[readonly]').css({'background-color':'#e9ecef'});
                     // $(':input[readonly]').css({'border':'0'});
                     // $(':input[readonly]').css({'color':'#6c757d'});
-                    $("#reset").click(function (){
-                        $(".calcul").each(function(){
+                    $("#reset").click(function() {
+                        $(".calcul").each(function() {
                             $(this).val("");
                         });
                         $(".calcul").trigger("blur");
